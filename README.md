@@ -1,6 +1,6 @@
-# Remark Table Data Label
+# Rehype Table Data Label
 
-[Remark](https://github.com/remarkjs/remark) plugin to take table header values and add them as data-labels within a data cell. This allows for tables to be consumed in mobile browsers. 
+[rehype](https://github.com/rehypejs) plugin to take table header values and add them as data-labels within a data cell. This allows for tables to be consumed in mobile browsers. 
 
 ![Table first being rendered on desktop with headers along the top row. As the table resizes, the table headers are shown next to individual cell values](img/responsiveTable.gif)
 

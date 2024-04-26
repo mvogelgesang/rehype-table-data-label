@@ -1,6 +1,6 @@
 import { visit } from "unist-util-visit";
 
-export default function remarkTableDataLabel() {
+export default function rehypeTableDataLabel() {
   return (tree) => {
     visit(tree, "element", (node) => {
       if (node.tagName === "table") {
