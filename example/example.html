@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <title>Accessible & Responsive Table Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      table {
+        border-collapse: collapse;
+        font-size: 1.25rem;
+        margin: 3rem 0 1rem;
+        padding: 0;
+        width: 100%;
+      }
+
+      table th {
+        padding: 0.5rem;
+        text-align: left;
+        vertical-align: bottom;
+        background-color: #537853;
+        color: #f3f4f3;
+      }
+
+      table td {
+        padding: 0.25rem 0.5rem;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      @media screen and (min-width: 37.5rem) {
+        tr:nth-child(2n) {
+          background-color: #8b968b;
+        }
+
+        tr:hover {
+          background-color: #18809b;
+          color: #f3f4f3;
+        }
+      }
+      @media screen and (max-width: 37.5rem) {
+        table,
+        tbody {
+          display: block;
+          width: 100%;
+        }
+
+        thead {
+          display: none;
+        }
+
+        table tr,
+        table th,
+        table td {
+          display: block;
+          padding: 0;
+          text-align: right;
+          white-space: normal;
+        }
+
+        table tr {
+          margin-bottom: 1rem;
+          border: 2px solid #bde9f5;
+        }
+
+        table th[data-label]:before,
+        table td[data-label]:before {
+          content: attr(data-label) ": ";
+          float: left;
+          font-size: 1rem;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        table td {
+          padding: 0.5rem;
+          border-bottom: 1px dotted #18809b;
+        }
+
+        table td:empty {
+          display: none;
+        }
+
+        table td:first-child {
+          font-size: 1.25rem;
+          margin-bottom: 0.5rem;
+        }
+
+        table td:last-child {
+          border-bottom: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Country</th>
+          <th>City</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Name">Jane</td>
+          <td data-label="Country">Canada</td>
+          <td data-label="City">Vancouver</td>
+        </tr>
+        <tr>
+          <td data-label="Name">Thibaut</td>
+          <td data-label="Country">Belgium</td>
+          <td data-label="City">Ghent</td>
+        </tr>
+        <tr>
+          <td data-label="Name">Richard</td>
+          <td data-label="Country">Scotland</td>
+          <td data-label="City">Edinburgh</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
